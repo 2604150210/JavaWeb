@@ -18,7 +18,7 @@
 </head>
 <body>
 <div id="main">
-    <form name = "backuserform" method="post" action="admin/UserAddServlet">
+    <form name = "backuserform" method="post" action="UserAddServlet">
         <table class="standard">
             <thead>
                 <tr>
