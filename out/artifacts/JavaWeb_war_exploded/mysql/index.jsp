@@ -18,16 +18,16 @@
     String password = "ahsturemoter";
     Class.forName(driverClass);//加载数据库驱动
     Connection conn = DriverManager.getConnection(url,username,password);//建立连接
-    Statement statement = conn.createStatement();
-    ResultSet rs = statement.executeQuery("SELECT * FROM cms_user WHERE NAME = 'jal'");//执行SQL语句
-//    PreparedStatement ps = conn.prepareStatement("INSERT INTO cms_user (NAME ,PASSWORD,PHONE) VALUE (?,?,?)");
-//    ps.setString(1,"Rainny");
-//    ps.setString(2,"33333");
-//    ps.setString(3,"18855031020");
-//    int rtn = ps.executeUpdate();
-//    ps = conn.prepareStatement("SELECT * FROM cms_user");
-//
-//    ResultSet rs = ps.executeQuery();
+//    Statement statement = conn.createStatement();
+//    ResultSet rs = statement.executeQuery("SELECT * FROM cms_user WHERE NAME = 'jal'");//执行SQL语句
+    PreparedStatement ps = conn.prepareStatement("INSERT INTO cms_user (NAME ,PASSWORD,PHONE) VALUE (?,?,?)");
+    ps.setString(1,"Rainny");
+    ps.setString(2,"33333");
+    ps.setString(3,"18855031020");
+    int rtn = ps.executeUpdate();
+    ps = conn.prepareStatement("SELECT * FROM cms_user");
+
+    ResultSet rs = ps.executeQuery();
     while(rs.next()){
         out.println("<h3>用户名：" + rs.getString(2) + " 手机号：" + rs.getString(8) + "</h3>");
     }
