@@ -7,8 +7,8 @@ public class TestJDBC {
     public static void main(String[] args) throws Exception{
         String driverClass = "com.mysql.jdbc.Driver";
         String url = "jdbc:mysql://oj.ahstu.cc:3306/jal";
-        String username = "remoter";
-        String password = "ahsturemoter";
+        String username = "";
+        String password = "";
         Class.forName(driverClass);//加载数据库驱动
         Connection conn = DriverManager.getConnection(url,username,password);//建立连接
         Statement statement = conn.createStatement();
