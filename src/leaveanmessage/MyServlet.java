@@ -20,8 +20,8 @@ public class MyServlet extends HttpServlet {
         String name = MyTools.toChinese(request.getParameter("name"));
         String title = MyTools.changeHTML(MyTools.toChinese(request.getParameter("title")));
         String content = MyTools.changeHTML(MyTools.toChinese(request.getParameter("content")));
-        String time = MyTools.changeTime(new Date());
 
+        String time = MyTools.changeTime(new Date());
         WordSingle single = new WordSingle();
         single.setName(name);
         single.setTitle(title);
