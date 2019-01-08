@@ -11,7 +11,7 @@ public class DB {// 是一个JDBC链接类.只是一个工具类
         Connection conn = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql//oj.ahstu.cc:3306/jal","remoter","ahsturemoter");
+            conn = DriverManager.getConnection("jdbc:mysql//oj.ahstu.cc:3306/jal","user","password");
             conn.setAutoCommit(false);
         }catch (SQLException|ClassNotFoundException e){
             e.printStackTrace();
